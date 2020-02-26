@@ -14,3 +14,7 @@ open: http://localhost:8080/
         npm run server
 
 open: http://localhost:8084/
+
+
+ref
+https://stackoverflow.com/questions/40566986/pretty-permalinks-dont-work-with-github-pages

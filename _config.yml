@@ -1,3 +1,6 @@
+# Site settings
+permalink: pretty
+
 defaults:
     -
        scope:
