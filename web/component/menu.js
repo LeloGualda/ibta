@@ -1,6 +1,6 @@
 import  React  from 'react';
 import {Navbar,Nav,NavDropdown} from 'react-bootstrap'
-
+import {Link} from 'react-router-dom'
 
 export default function Menu(){
     return <Navbar bg="light"  expand="lg">
@@ -8,8 +8,8 @@ export default function Menu(){
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link href="/ibta/">Home</Nav.Link>
-        <Nav.Link href="/ibta/tcc">TCC</Nav.Link>
+        <Link to="/ibta/">Home</Link>
+        <Link to="/ibta/tcc">TCC</Link>
         <NavDropdown title="Disciplinas" id="basic-nav-dropdown">
           <NavDropdown.Item href="/ibta/disciplinas/web-service">Web service</NavDropdown.Item>
         </NavDropdown>

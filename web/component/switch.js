@@ -8,7 +8,7 @@ import { Container } from 'react-bootstrap';
 
 export default function Switch() {
     return <Container><S>
-        <Route exact basename="/ibta/" path="/">
+        <Route exact path="/ibta/">
             <Home/>
         </Route>
         <Route  path="/ibta/tcc">
