@@ -14,7 +14,7 @@ export default function Switch() {
         <Route  path="/ibta/tcc">
             <TCC/>
         </Route>
-        <Route  basename="/ibta"  path="/disciplinas/:info" children={Disciplinas}/>
+        <Route path="/ibta/disciplinas/:info" children={Disciplinas}/>
     </S>
     </Container>
 }

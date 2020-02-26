@@ -11,7 +11,7 @@ export default function Menu(){
         <Link to="/ibta/">Home</Link>
         <Link to="/ibta/tcc">TCC</Link>
         <NavDropdown title="Disciplinas" id="basic-nav-dropdown">
-          <NavDropdown.Item href="/ibta/disciplinas/web-service">Web service</NavDropdown.Item>
+          <NavDropdown.Item ><Link to="/ibta/disciplinas/web-service">Web service</Link></NavDropdown.Item>
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
