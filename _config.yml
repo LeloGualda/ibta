@@ -1,2 +1,7 @@
-theme: jekyll-theme-architect
-title: ibta
+defaults:
+    -
+       scope:
+         path: ""
+         type: "pages"
+       values:
+         permalink: "/:path/:basename/"
