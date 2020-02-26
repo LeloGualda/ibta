@@ -10,7 +10,7 @@ import (
 func handler(w http.ResponseWriter, r *http.Request) {
 
 	tmpl, _ := template.ParseFiles("../index.html")
-
+	fmt.Println(r.URL.Path)
 	if err := tmpl.ExecuteTemplate(w, "index.html", nil); err != nil {
 		fmt.Println("54:" + err.Error())
 		http.Error(w, http.StatusText(500), 500)
@@ -20,6 +20,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	fs := http.FileServer(http.Dir("../public"))
 	http.Handle("/public/", http.StripPrefix("/public/", fs))
+
 	http.HandleFunc("/", handler)
+	fmt.Println("start server, open: localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
+
 }
