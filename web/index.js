@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
+import {render} from 'react-dom'
 import {BrowserRouter as Router} from "react-router-dom";
 import {Container} from 'react-bootstrap'
 
@@ -20,5 +20,4 @@ class App extends Component {
     }
 }
 
-ReactDOM.render(
-    <App/>, document.getElementById('react'))
+render(<App/>, document.getElementById('react'))
