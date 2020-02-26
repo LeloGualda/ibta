@@ -8,13 +8,13 @@ import { Container } from 'react-bootstrap';
 
 export default function Switch() {
     return <Container><S>
-        <Route exact path="/">
+        <Route exact basename="/ibta/" path="/">
             <Home/>
         </Route>
-        <Route path="/tcc">
+        <Route  path="/ibta/tcc">
             <TCC/>
         </Route>
-        <Route  path="/disciplinas/:info" children={Disciplinas}/>
+        <Route  basename="/ibta"  path="/disciplinas/:info" children={Disciplinas}/>
     </S>
     </Container>
 }

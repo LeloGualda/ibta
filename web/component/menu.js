@@ -8,10 +8,10 @@ export default function Menu(){
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/tcc">TCC</Nav.Link>
+        <Nav.Link href="/ibta/">Home</Nav.Link>
+        <Nav.Link href="/ibta/tcc">TCC</Nav.Link>
         <NavDropdown title="Disciplinas" id="basic-nav-dropdown">
-          <NavDropdown.Item href="/disciplinas/web-service">Web service</NavDropdown.Item>
+          <NavDropdown.Item href="/ibta/disciplinas/web-service">Web service</NavDropdown.Item>
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
