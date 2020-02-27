@@ -1,13 +1,9 @@
 import React from 'react'
-// import styled from 'styled-components'
-
-import {Container} from 'react-bootstrap'
-
-export default  function (){
-    return <div/>
-}
+import styled from 'styled-components'
 
 
-// const DivContainer =  styled.div`
 
-// `
+const DivContainer =  styled.div`
+
+`
+export default DivContainer
