@@ -5,7 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 export default function () {
 
-    const items = [1, 2]
+    const items = [1, 2, 3]
 
     return <Sidebar>
         <nav className="bg-light">
