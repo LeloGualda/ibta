@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Atidade1 from './webservice/ativdade1'
-import Atidade2 from './webservice/ativdade1'
+import Atidade2 from './webservice/ativdade2'
 
 export default function () {
 
