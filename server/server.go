@@ -19,7 +19,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	fs := http.FileServer(http.Dir("../public"))
-	http.Handle("/public/", http.StripPrefix("/public/", fs))
+	http.Handle("/ibta/public/", http.StripPrefix("/ibta/public/", fs))
 
 	http.HandleFunc("/ibta/", handler)
 	fmt.Println("start server, open: localhost:8080")
