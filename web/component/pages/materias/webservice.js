@@ -14,42 +14,58 @@ export default function () {
             <label >Atividade 3
             </label>: Exemplo Web service</h3>
         <h4>Linguagem GO</h4>
-
-        <p className="code">
-                {`package main
-
-                import (
-                    "fmt"
-                    "log"
-                    "net/http"
-                    "text/template"
-                )
-
-                func handler(w http.ResponseWriter, r *http.Request) {
-
-                    tmpl, _ := template.ParseFiles("../indexLocal.html")
-                    fmt.Println(r.URL.Path)
-                    if err := tmpl.ExecuteTemplate(w, "indexLocal.html", nil); err != nil {
-                        fmt.Println("54:" + err.Error())
-                        http.Error(w, http.StatusText(500), 500)
-                    }
-                }
-
-                func main() {
-                    fs := http.FileServer(http.Dir("../public"))
-                    http.Handle("/public/", http.StripPrefix("/public/", fs))
-
-                    http.HandleFunc("/ibta/", handler)
-                    fmt.Println("start server, open: localhost:8080")
-                    log.Fatal(http.ListenAndServe(":8080", nil))
-
-                }
-            `}
+        <p>
+            <Block>
+                <b>1º</b>
+                Arquivo html inicial
+                <TextFileName>index.html</TextFileName>
+                <img src="/ibta/public/image/atividade3/indexHtml.png"/>
+            </Block>
+            <Block>
+                <b>2º</b>
+                    Pasta pública para arquivos png,js,svg, etc...
+                <TextFileName>/public/</TextFileName>
+            </Block>
+            <Block>
+                <b>3º</b>
+                Arquivo golang do servidor
+                <TextFileName>server/server.go</TextFileName>
+                <img src="/ibta/public/image/atividade3/serverGo.png"/>
+            </Block>
+            <Block>
+                <b>3º inicie o servidor</b>
+                <TextFileName style={{color:'black'}}>$ go run server.go</TextFileName>
+            </Block>
+            <Block>
+                <b>Estrutura  Final</b>
+                <TextFileName>index.html</TextFileName>
+                <TextFileName>/public/</TextFileName>
+                <TextFileName>server/server.go</TextFileName>
+            </Block>
         </p>
 
     </ShowText>
 }
 
-const ShowText = styled.div`
+const ShowText = styled.div `
 
+`
+
+const TextFileName = styled.label `
+    display:block;
+    color:#ff0004;
+    background-color:#d6d6d6;
+    width:max-content;
+    padding:6px 10px;
+    font-family:roboto;
+    border-radius:4px;
+`
+
+const Block = styled.div `
+    padding:10px 0px;
+    img {
+        width:auto;
+        height:auto;
+        display:block;
+    }
 `
