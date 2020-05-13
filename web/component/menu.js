@@ -1,21 +1,30 @@
-import  React  from 'react';
-import {Navbar,Nav,NavDropdown} from 'react-bootstrap'
-import {Link} from 'react-router-dom'
-import styled from 'styled-components'
+import React from "react"
+import { Navbar, Nav } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
-export default function Menu(){
-    return <styleMenu><Navbar bg="light"  expand="lg">
-    <Navbar.Brand href="home">AURÉLIO L. GUALDA</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto">
-      <Link to="/ibta/" className="nav-link">Home</Link>
-        <Link to="/ibta/tcc" className="nav-link" >TCC</Link>
-        <NavDropdown title="Disciplinas" id="basic-nav-dropdown">
-          <NavDropdown.Item ><Link className="nav-link" to="/ibta/disciplinas/web-service">Web service</Link></NavDropdown.Item>
-        </NavDropdown>
-      </Nav>
-    </Navbar.Collapse>
-  </Navbar>
-  </styleMenu>
+export default function Menu() {
+  return (
+    <styleMenu>
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="home">AURÉLIO LUIZ GUALDA</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Link to="/1" className="nav-link">
+              atividade 1
+            </Link>
+            <Link to="/2" className="nav-link">
+              atividade 2
+            </Link>
+            <Link to="/3" className="nav-link">
+              atividade 3
+            </Link>
+            <Link to="/4" className="nav-link">
+              atividade 4
+            </Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </styleMenu>
+  );
 }

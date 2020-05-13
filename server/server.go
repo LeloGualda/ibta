@@ -9,7 +9,7 @@ import (
 
 func handler(w http.ResponseWriter, r *http.Request) {
 
-	tmpl, _ := template.ParseFiles("../indexLocal.html")
+	tmpl, _ := template.ParseFiles("./indexLocal.html")
 	fmt.Println(r.URL.Path)
 	if err := tmpl.ExecuteTemplate(w, "indexLocal.html", nil); err != nil {
 		fmt.Println("54:" + err.Error())
@@ -18,10 +18,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	fs := http.FileServer(http.Dir("../public"))
-	http.Handle("/ibta/public/", http.StripPrefix("/ibta/public/", fs))
+	fs := http.FileServer(http.Dir("./"))
+	http.Handle("/public/", http.StripPrefix("/public/", fs))
 
-	http.HandleFunc("/ibta/", handler)
+	http.HandleFunc("/", handler)
 	fmt.Println("start server, open: localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 
